@@ -5,9 +5,9 @@ from django.contrib.postgres.fields import ArrayField, HStoreField
 class Order(models.Model):
     gam_account_no = models.CharField(max_length=32, db_index=True)
     order_id = models.BigIntegerField(db_index=True)
-    order_name = models.CharField(max_length=64, db_index=True)
-    advertiser = models.CharField(max_length=64, db_index=True)
-    trafficker = models.CharField(max_length=64, db_index=True)
+    order_name = models.CharField(max_length=64, db_index=True, blank=True)
+    advertiser = models.CharField(max_length=64, db_index=True, blank=True)
+    trafficker = models.CharField(max_length=64, db_index=True, blank=True)
 
 class LineItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
