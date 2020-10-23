@@ -48,6 +48,9 @@ class Client():
             'PlacementService', version=v)
         self.creative_service = self.dfp_client.GetService(
             'CreativeService', version=v)
+        self.order_service = self.dfp_client.GetService(
+            'OrderService', version=v)
+        )
 
     def __get_default_adunit_sizes(self,):
         return [
