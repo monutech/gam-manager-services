@@ -19,3 +19,10 @@ class LineItem(models.Model):
     li_custom_targeting = HStoreField()
     li_sizes = ArrayField(models.CharField(max_length=32, blank=True))
     li_status = models.CharField(max_length=12, blank=True)
+
+class Group(models.Model):
+    orders = models.ManyToManyField(Order, related_name="orders",
+                                    null=True, blank=True)
+    line_items = models.ManyToManyField(LineItem, related_name="line_items",
+                                        null=True, blank=True)
+    base_pql = models.CharField(max_length=255)
