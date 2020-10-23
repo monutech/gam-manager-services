@@ -15,5 +15,6 @@ pytz==2020.1
 six==1.15.0
 sqlparse==0.4.1
 vine==5.0.0
+waitress==1.4.4
 wcwidth==0.2.5
 whitenoise==5.2.0
