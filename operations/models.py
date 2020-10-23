@@ -26,3 +26,8 @@ class Group(models.Model):
     line_items = models.ManyToManyField(LineItem, related_name="line_items",
                                         null=True, blank=True)
     base_pql = models.CharField(max_length=255)
+
+
+class Object(models.Model):
+    name = models.CharField(max_length=255)
+    gam_name = models.CharField(max_length=255)
