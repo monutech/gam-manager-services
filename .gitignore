@@ -1,3 +1,5 @@
 *.pyc
 __pycache__
 gam_services/settings/local.py
+venv
+.idea/
