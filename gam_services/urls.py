@@ -19,5 +19,5 @@ from operations.views import Group
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('groups/', Group.as_view())
+    path('groups/', Group.as_view({'get': 'list'}))
 ]

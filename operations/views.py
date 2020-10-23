@@ -8,11 +8,11 @@ from rest_framework.decorators import action
 
 
 # Create your views here.
-class Group(viewsets.ModelViewset):
+class Group(viewsets.ModelViewSet):
     queryset = Group.objects.all()
 
 
-class Object(viewsets.ModelViewset):
+class Object(viewsets.ModelViewSet):
     queryset = Object.objects.all()
 
     @action(detail=True, methods=["POST"])

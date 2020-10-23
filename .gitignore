@@ -3,3 +3,4 @@ __pycache__
 gam_services/settings/local.py
 venv
 .idea/
+gam_services/__pycache__
