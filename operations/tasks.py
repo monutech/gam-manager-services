@@ -11,14 +11,14 @@ def get_orders(version='v202008'):
     statement = ad_manager.StatementBuilder(version=version)
     orders = []
     while True:
-    response = order_service.getOrdersByStatement(statement.ToStatement())
-    if 'results' in response and len(response['results']):
-        for order in response['results']:
-            orders.append(order)
+        response = order_service.getOrdersByStatement(statement.ToStatement())
+        if 'results' in response and len(response['results']):
+            for order in response['results']:
+                orders.append(order)
 
-        statement.offset += statement.limit
-    else:
-        break
+            statement.offset += statement.limit
+        else:
+            break
 
     return orders
 
