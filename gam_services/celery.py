@@ -2,7 +2,7 @@ import os
 
 from celery import Celery
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mmt_slack_notif.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'gam_services.settings')
 
 app = Celery('proj', broker=os.environ.get('REDIS_URL'))
 
