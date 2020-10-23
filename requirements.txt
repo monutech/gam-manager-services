@@ -20,6 +20,7 @@ djangorestframework==3.12.1
 google-auth==1.22.1
 google-auth-oauthlib==0.4.1
 googleads==25.0.0
+httplib2==0.18.1
 idna==2.10
 ipython==7.18.1
 ipython-genutils==0.2.0
@@ -27,6 +28,7 @@ isodate==0.6.0
 jedi==0.17.2
 kombu==5.0.2
 lxml==4.6.1
+oauth2client==4.1.3
 oauthlib==3.1.0
 parso==0.7.1
 pexpect==4.8.0
