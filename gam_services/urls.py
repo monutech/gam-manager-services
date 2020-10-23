@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from operations.views import Group, Object, Order
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('groups/', Group.as_view({'get': 'list'})),
+    path('objects/', Object.as_view({'get': 'list'})),
+    path('orders/', Order.as_view({'get': 'list'}))
 ]
