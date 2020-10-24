@@ -22,9 +22,9 @@ class LineItem(models.Model):
 
 class Group(models.Model):
     orders = models.ManyToManyField(Order, related_name="orders",
-                                    null=True, blank=True)
+                                    blank=True)
     line_items = models.ManyToManyField(LineItem, related_name="line_items",
-                                        null=True, blank=True)
+                                        blank=True)
     base_pql = models.CharField(max_length=255)
 
 
